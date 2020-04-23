@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>YGO TRADER</title>
+  <link rel="icon" href="../../favicon.png">
+
+  <!-- Vendor styles -->
+  <link rel="stylesheet" href="../../resources/vendors/zwicon/zwicon.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/dropzone/dropzone.css">
+  <link rel="stylesheet" href="../../resources/vendors/flatpickr/flatpickr.min.css" />
+  <link rel="stylesheet" href="../../resources/vendors/nouislider/nouislider.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+  <link rel="stylesheet" href="../../resources/vendors/trumbowyg/ui/trumbowyg.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/rateyo/jquery.rateyo.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/lightgallery/css/lightgallery.min.css">
+
+  <link rel="stylesheet" href="../../resources/vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- App styles -->
+  <link rel="stylesheet" href="../../resources/css/app.min.css">
+  <!-- YGO Trader self styles -->
+  <link rel="stylesheet" href="../../ygoself/css/ygo.app.css">
+  <link rel="stylesheet" href="../../ygoself/css/ygo.auth.css">
+</head>
+
+<body data-sa-theme="4">
+<main class="main">
+  <div w3-include-html="../common/loader.html"></div>
+  <div w3-include-html="../common/filterbar.html"></div>
+  <div w3-include-html="../common/store_sidebar.html"></div>
+
+  <section class="content content--full" style="padding-top: 0;">
+    <div class="content__inner">
+      <header class="header-section visible-desktop">
+        <div w3-include-html="../common/main_header_desktop.html"></div>
+        <div w3-include-html="../common/tool_header.html"></div>
+        <div w3-include-html="../common/subtool_header_tradecenter.html"></div>
+      </header>
+
+      <header class="header-section header-top visible-mobile">
+        <div w3-include-html="../common/main_header_mobile.html"></div>
+        <div w3-include-html="../common/subtool_header_search.html"></div>
+      </header>
+
+      <div id="game-card-group" class="game-card-group contacts row"></div>
+
+      <header class="header-section header-bottom visible-mobile" style="bottom: 0;">
+        <div w3-include-html="../common/subtool_header_tradecenter_bottom.html"></div>
+        <div w3-include-html="../common/tool_header.html"></div>
+      </header>
+
+      <button id="auth-open" class="btn btn-theme d-none" data-toggle="modal" data-target="#auth-dialog"></button>
+
+      <div class="modal fade" id="auth-dialog" data-keyboard="false" data-backdrop="false"
+           tabindex="-1" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="modal-dialog modal-dialog-centered d-flex justify-content-center col-10">
+          <div id="login-section" style="width: 80%; height: 300px; display: block;" w3-include-html="../common/login.html"></div>
+          <div id="forgot-section" style="width: 80%; display: none;" w3-include-html="../common/forgot.html"></div>
+          <div id="register-section" style="width: 80%; display: none;" w3-include-html="../common/register.html"></div>
+          <button id="auth-close" type="button" class="btn btn-link d-none" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- Vendors -->
+<script src="../../resources/vendors/jquery/jquery.min.js"></script>
+<script src="../../resources/vendors/popper.js/popper.min.js"></script>
+<script src="../../resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+<script src="../../resources/vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+<script src="../../resources/vendors/select2/js/select2.full.min.js"></script>
+<script src="../../resources/vendors/dropzone/dropzone.min.js"></script>
+<script src="../../resources/vendors/flatpickr/flatpickr.min.js"></script>
+<script src="../../resources/vendors/nouislider/nouislider.min.js"></script>
+<script src="../../resources/vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="../../resources/vendors/trumbowyg/trumbowyg.min.js"></script>
+<script src="../../resources/vendors/rateyo/jquery.rateyo.min.js"></script>
+<script src="../../resources/vendors/jquery-text-counter/textcounter.min.js"></script>
+<script src="../../resources/vendors/autosize/autosize.min.js"></script>
+<script src="../../resources/vendors/lightgallery/js/lightgallery-all.min.js"></script>
+
+<!-- App functions and actions -->
+<script src="../../resources/js/app.min.js"></script>
+
+<!-- Utilities for the api and action -->
+<script src="../../ygoself/js/html-include.js"></script>
+<script src="../../ygoself/js/card-builder.js"></script>
+<script src="../../ygoself/js/demo-cards.js"></script>
+<script src="../../ygoself/js/common-util.js"></script>
+
+</body>
+
+<script>
+  includeHTML();
+
+  $(document).ready(function() { 
+    includeHTML();
+
+    var login_status = localStorage.getItem('login_status');
+    if (login_status == "ok") {
+      $(".modal").hide();
+    } else {
+      $(window).on('load', function () {
+        $('.modal-body .auth-param').on('click', function (event) {
+          if ($(this).hasClass("to-forgot")) { 
+          //  window.location.href = './tradecenter.html';
+             $('.modal-dialog #login-section').hide();
+             $('.modal-dialog #forgot-section').show();
+             $('.modal-dialog #register-section').hide();         
+          } else if ($(this).hasClass('to-register')) {
+            // window.location.href = './tradecenter.html';
+             $('.modal-dialog #login-section').hide();
+             $('.modal-dialog #register-section').show();
+             $('.modal-dialog #forgot-section').hide();
+          } else if ($(this).hasClass('to-login')) {
+            // window.location.href = './tradecenter.html';
+            $('.modal-dialog #register-section').hide();
+            $('.modal-dialog #forgot-section').hide();
+            $('.modal-dialog #login-section').show();
+          }
+        });
+  
+        // $('.modal-footer button').on('click', function (event) {
+        //   $('#auth-close').click();
+        // });
+      });
+  
+      if (true) {
+        $('#auth-open').click();
+  
+        // const auth_param = getUrlParameter('auth');
+        // if (auth_param === 'login') {
+        //   $('#login-section').show();
+        // } else if (auth_param === 'register') {
+        //   $('#register-section').show();
+        // } else if (auth_param === 'forgot') {
+        //   $('#forgot-section').show();
+        // } else {
+        //   $('#login-section').show();
+        // }
+      }
+    }
+      
+    $(".contacts__img").click(function() {
+      $(this).attr('href', 'tradecenter_main.html');
+    });
+
+
+
+
+  });
+</script>
+
+</html>

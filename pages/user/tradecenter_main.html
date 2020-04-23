@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>YGO TRADER</title>
+  <link rel="icon" href="../../favicon.png">
+
+  <!-- Vendor styles -->
+  <link rel="stylesheet" href="../../resources/vendors/zwicon/zwicon.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/dropzone/dropzone.css">
+  <link rel="stylesheet" href="../../resources/vendors/flatpickr/flatpickr.min.css" />
+  <link rel="stylesheet" href="../../resources/vendors/nouislider/nouislider.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+  <link rel="stylesheet" href="../../resources/vendors/trumbowyg/ui/trumbowyg.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/rateyo/jquery.rateyo.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/lightgallery/css/lightgallery.min.css">
+
+  <link rel="stylesheet" href="../../resources/vendors/bootstrap/css/bootstrap.min.css">
+
+  <!-- App styles -->
+  <link rel="stylesheet" href="../../resources/css/app.min.css">
+  <!-- YGO Trader self styles -->
+  <link rel="stylesheet" href="../../ygoself/css/ygo.app.css">
+  <link rel="stylesheet" href="../../ygoself/css/ygo.store.css">
+
+  
+</head>
+
+<body data-sa-theme="4">
+<main class="main">
+  <div w3-include-html="../common/loader.html"></div>
+  <div w3-include-html="../common/filterbar.html"></div>
+  
+  <section class="content content--full" style="padding-top: 0;">
+    <div class="content__inner">
+      <header class="header-section visible-desktop">
+        <div w3-include-html="../common/main_header_desktop_custom.html"></div>
+        <div w3-include-html="../common/tool_header.html"></div>
+        <div w3-include-html="../common/subtool_header_search_custom.html"></div>
+      </header>
+ 
+      <header class="header-section header-top visible-mobile">
+        <div w3-include-html="../common/main_header_mobile_custom.html"></div>
+        <div w3-include-html="../common/subtool_header_search_custom.html"></div>
+      </header>
+
+      <div class="container-fluid px-4 py-3">
+        <div id="game-card-group" class="row d-flex justify-content-center game-card-group-cus">
+          <div id="message-tradecenter-main" class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-7">
+            <div class="messages messages-self border border-top-0 border-bottom-0 my-5">
+              <div class="messages__body" style="background-color: #343434;">
+                <div class="messages__header row" style ="border-bottom: 1px solid #fffff530; margin-left: 0.5rem; margin-right: 0.5rem;">
+                  <div class="toolbar toolbar--inner col-12 mb-0" style="background-color: #343434;">
+                    <div class="toolbar__label">
+                      <img src="../../ygoself/demo/img/profile-pics/8.jpg" alt="">
+                      Ann Watkinson
+                    </div>
+  
+                    <div class="message-card-info">
+                      <div>
+                        <span class="message-card-name">Dark Grepher</span>
+                        <span class="message-card-set-code">PTDN-En023</span>
+                        <span class="message-card-edition">1st Edition</span>
+                        <span class="message-card-condition">Near Mint</span>
+                      </div>
+                      <div class="message-card-price">
+                        $5.34
+                      </div>
+                    </div>
+  
+                    <div class="actions toolbar__actions" style="margin-top: -2.8rem;">
+                      <i class="actions__item zwicon-search" data-sa-action="toolbar-search-open"></i>
+                      <div class="dropdown actions__item">
+                        <i class="actions__item zwicon-more-h" data-toggle="dropdown"></i>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="" class="dropdown-item">Refresh</a>
+                          <a href="" class="dropdown-item">Delete all</a>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="toolbar__search">
+                      <input type="text" placeholder="Search...">
+                      <i class="toolbar__search__close zwicon-arrow-left" data-sa-action="toolbar-search-close"></i>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="messages__content p-3">
+                  <div class="scrollbar">
+                    <div class="messages__item">
+                      <div class="messages__details">
+                        <p>Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.</p>
+                        <small class="date-text-small"><i class="zwicon-clock"></i> 20/04/2017 at 09:00</small>
+                      </div>
+                    </div>
+  
+                    <div class="messages__item messages__item--right">
+                      <div class="messages__details">
+                        <p>Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.</p>
+                        <p>Nunc sed turpis mi. In eu massa a sem pulvinar condimentum.</p>
+                        <small class="date-text-small"><i class="zwicon-clock"></i> 20/04/2017 at 09:10</small>
+                      </div>
+                    </div>
+  
+                    <div class="messages__item">
+                      <div class="messages__details">
+                        <p>Etiam ex arcumentum</p>
+                        <small class="date-text-small"><i class="zwicon-clock"></i> 20/04/2017 at 09:11</small>
+                      </div>
+                    </div>
+  
+                    <div class="messages__item messages__item--right">
+                      <div class="messages__details">
+                        <p>Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                        <small class="date-text-small"><i class="zwicon-clock"></i> 20/04/2017 at 09:15</small>
+                      </div>
+                    </div>
+  
+                    <div class="messages__item">
+                      <div class="messages__details">
+                        <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                        <p>Nascetur ridiculus mus. Etiam ac tortor ut elit sodales varius. Mauris id ipsum id mauris malesuada tincidunt. Vestibulum elit massa, pulvinar at sapien sed, luctus vestibulum eros. Etiam finibus tristique ante, vitae rhoncus sapien volutpat eget</p>
+                        <small class="date-text-small"><i class="zwicon-clock"></i> 20/04/2017 at 09:22</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="purchase-status row mx-1">
+                  <div class="d-flex justify-content-center pb-3">
+                    <button class="btn active">Shipped</button>
+                  </div>
+                  <div class="d-flex justify-content-center pb-3">
+                    <button class="btn">Tracking #</button>
+                  </div>
+                  <div class="d-flex justify-content-center pb-3">
+                    <button class="btn">Received</button>
+                  </div>
+                  <div class="d-flex justify-content-center pb-3">
+                    <button id="review" class="btn" style="padding: 8px 26.5px;">Review</button>
+                  </div>
+                </div>
+  
+                <div class="amozi_modal row" id="amozi_modal1" style="display: none;">
+                </div>
+  
+                <div class="messages__reply row">
+                  <div class="text pl-4">
+                    <textarea class="messages__reply__text" placeholder="Type your message..."></textarea>
+                  </div>
+                  <div class="row" style="width: 70px;">
+                    <div class="col-6 amizi_btn" style="align-self: center;">
+                      <img src="../../ygoself/img/icon_image/aa.png" alt="" alt="" width="30" height="30">
+                    </div>
+                    <div class="col-6 send_btn" style="align-self: center;">
+                      <img src="../../ygoself/img/send_btn_icon.png" alt="" width="34" height="40">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <header class="header-section header-bottom visible-mobile" style="bottom: 0;">
+        <div w3-include-html="../common/tool_header.html"></div>
+      </header>
+    </div>
+  </section>
+</main>
+
+
+
+<!-- Javascript -->
+<!-- Vendors -->
+<script src="../../resources/vendors/jquery/jquery.min.js"></script>
+<script src="../../resources/vendors/popper.js/popper.min.js"></script>
+<script src="../../resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+<script src="../../resources/vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+<script src="../../resources/vendors/select2/js/select2.full.min.js"></script>
+<script src="../../resources/vendors/dropzone/dropzone.min.js"></script>
+<script src="../../resources/vendors/flatpickr/flatpickr.min.js"></script>
+<script src="../../resources/vendors/nouislider/nouislider.min.js"></script>
+<script src="../../resources/vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="../../resources/vendors/trumbowyg/trumbowyg.min.js"></script>
+<script src="../../resources/vendors/rateyo/jquery.rateyo.min.js"></script>
+<script src="../../resources/vendors/jquery-text-counter/textcounter.min.js"></script>
+<script src="../../resources/vendors/autosize/autosize.min.js"></script>
+<script src="../../resources/vendors/lightgallery/js/lightgallery-all.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<!-- App functions and actions -->
+<script src="../../resources/js/app.min.js"></script>
+
+<!-- Utilities for the api and action -->
+<script src="../../ygoself/js/card-builder-tradecenter-main.js"></script>
+<script src="../../ygoself/js/demo-cards.js"></script>
+<script src="../../ygoself/js/html-include.js"></script>
+</body>
+
+<script>
+  $(document).ready(function() {
+    includeHTML();
+
+    $(".message-call #message-call").click(function() {
+      $("#message-tradecenter-main").toggle();
+    });
+    var str="";
+    for(var i=0;i<4;i++) {
+      str += '<div class="row" style="padding-top:10px">';
+      for(var j=0;j<6;j++) {
+        var n=i*6+j;
+        str += '<div class="col-2">';
+        str +='<img src="../../ygoself/img/icon_image/a'+n+'.png" alt="" style="max-width:30px;max-height:30px;width: auto;height: auto;">';
+        str += '</div>';
+      }
+      str += '</div>';
+    }
+    $(".amozi_modal").html(str);
+    $('.amizi_btn').on('click',function(){
+      $("#amozi_modal").toggle();
+      $("#amozi_modal1").toggle();
+    });
+
+  });
+</script>
+
+</html>

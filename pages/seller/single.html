@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>YGO TRADER</title>
+  <link rel="icon" href="../../favicon.png">
+
+  <!-- Vendor styles -->
+  <link rel="stylesheet" href="../../resources/vendors/zwicon/zwicon.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/dropzone/dropzone.css">
+  <link rel="stylesheet" href="../../resources/vendors/flatpickr/flatpickr.min.css" />
+  <link rel="stylesheet" href="../../resources/vendors/nouislider/nouislider.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+  <link rel="stylesheet" href="../../resources/vendors/trumbowyg/ui/trumbowyg.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/rateyo/jquery.rateyo.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/lightgallery/css/lightgallery.min.css">
+
+  <link rel="stylesheet" href="../../resources/vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- App styles -->
+  <link rel="stylesheet" href="../../resources/css/app.min.css">
+  <!-- YGO Trader self styles -->
+  <link rel="stylesheet" href="../../ygoself/css/ygo.app.css">
+  <link rel="stylesheet" href="../../ygoself/css/ygo.store.css">
+</head>
+
+<body data-sa-theme="4">
+<main class="main">
+  <div w3-include-html="../common/loader.html"></div>
+  <div w3-include-html="../common/filterbar.html"></div>
+  <div w3-include-html="../common/store_sidebar.html"></div>
+
+  <section class="content content--full" style="padding-top: 0;">
+    <div class="content__inner">
+      <header class="header-section visible-desktop">
+        <div w3-include-html="../common/main_header_desktop.html"></div>
+        <div w3-include-html="../common/tool_header.html"></div>
+        <div w3-include-html="../common/subtool_header_search.html"></div>
+      </header>
+
+      <header class="header-section header-top visible-mobile">
+        <div w3-include-html="../common/main_header_mobile.html"></div>
+        <div w3-include-html="../common/subtool_header_search.html"></div>
+      </header>
+
+      <div id="store-card-group" class="container pt-4">
+      </div>
+
+      <header class="header-section header-bottom visible-mobile" style="bottom: 0;">
+        <div w3-include-html="../common/tool_header.html"></div>
+      </header>
+    </div>
+  </section>
+</main>
+
+<!-- Older IE warning message -->
+<!--[if IE]>
+<div w3-include-html="../common/ie_warn.html"></div>
+<![endif]-->
+
+<!-- Javascript -->
+<!-- Vendors -->
+<script src="../../resources/vendors/jquery/jquery.min.js"></script>
+<script src="../../resources/vendors/popper.js/popper.min.js"></script>
+<script src="../../resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+<script src="../../resources/vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+<script src="../../resources/vendors/select2/js/select2.full.min.js"></script>
+<script src="../../resources/vendors/dropzone/dropzone.min.js"></script>
+<script src="../../resources/vendors/flatpickr/flatpickr.min.js"></script>
+<script src="../../resources/vendors/nouislider/nouislider.min.js"></script>
+<script src="../../resources/vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="../../resources/vendors/trumbowyg/trumbowyg.min.js"></script>
+<script src="../../resources/vendors/rateyo/jquery.rateyo.min.js"></script>
+<script src="../../resources/vendors/jquery-text-counter/textcounter.min.js"></script>
+<script src="../../resources/vendors/autosize/autosize.min.js"></script>
+<script src="../../resources/vendors/lightgallery/js/lightgallery-all.min.js"></script>
+
+<!-- App functions and actions -->
+<script src="../../resources/js/app.min.js"></script>
+
+<!-- Utilities for the api and action -->
+<script src="../../ygoself/js/html-include.js"></script>
+<script src="../../ygoself/js/store-builder.js"></script>
+<script src="../../ygoself/js/demo-cards.js"></script>
+</body>
+
+<script>
+  includeHTML();
+
+  $(document).ready(function() {
+    // Include filter div
+  });
+</script>
+
+</html>

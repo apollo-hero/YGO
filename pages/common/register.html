@@ -1,0 +1,86 @@
+<div class="modal-content">
+  <form action="#" id="formdata_register" enctype="multipart/form-data">
+    <div class="modal-header" style="text-align: center;">
+      <div class="" style="font-size: 1.5rem; font-weight: bold;">Create an account</div>
+        <div style="color: #222">Hello, stranger! Please enter your credentials below</div>
+        <span class="register_result" style="color: red; font-size: 18px;"></span>
+        
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <i class="fa fa-user" style="color: #323232; position: absolute; font-size: 1.5rem; bottom: .9rem;"></i><span id="username_error"></span>
+            <input type="text" id="username_register" name="username" class="form-control" placeholder="Username" required>
+            <span style="position: absolute; right: 0; bottom: .9rem; color: #E2CBB2; font-style: italic;">(required)</span>
+        </div>
+
+        <div class="form-group">
+            <i class="fa fa-envelope" style="color: #323232; position: absolute; font-size: 1.3rem; bottom: .9rem;"></i><span id="email_error"></span>
+            <input type="email" id="email_register" name="email" class="form-control" placeholder="Email" required autocomplete="username">
+            <span style="position: absolute; right: 0; bottom: .9rem; color: #E2CBB2; font-style: italic;">(required)</span>
+        </div>
+
+        <div class="form-group">
+            <i class="fa fa-lock" style="color: #323232; position: absolute; font-size: 1.5rem; bottom: .9rem;"></i><span id="password_error"></span>
+            <input type="password" id="password_register" name="password" class="form-control" placeholder="Password" required autocomplete="new-password">
+            <span style="position: absolute; right: 0; bottom: .9rem; color: #E2CBB2; font-style: italic;">(required)</span>
+        </div>
+
+        <div class="form-group">
+            <i class="fa fa-lock" style="color: #323232; position: absolute; font-size: 1.5rem; bottom: .9rem;"></i><span id="confirm_password_error"></span>
+            <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Confirm Password" required autocomplete="new-password">
+            <span style="position: absolute; right: 0; bottom: .9rem; color: #E2CBB2; font-style: italic;">(required)</span>
+        </div>
+
+        <div class="d-flex" style="justify-content: center">
+            <span class="auth-param to-login" style="color: #827b7b; cursor: pointer;">Already have an account? Sign in here</span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-link register" id="register"
+                style="flex: 1; border-radius: 20px; background-color: #91B84A; font-size: 1.1rem; font-weight: bold;">Register</button>
+    </div>
+  </form>
+</div>
+<script>
+  $(document).ready(function() {
+    $(".register").click(function() {
+      var username = $("#username_register").val();
+      var email = $("#email_register").val();
+      var password = $("#password_register").val();
+      var confirm_password = $("#confirm_password").val();
+      if(username != "" && email != "" && password != "" && confirm_password != ""){
+        if(password != confirm_password){
+          alert("Both passowrd is not equal!");
+        } else {
+          event.preventDefault();
+          var form = $('#formdata_register')[0];
+          var data = new FormData(form);
+          $("#register").prop("disabled", true);
+          $.ajax({
+            url: "http://api.ygotrader.com/api/accounts/register",
+            type : "POST",
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false,
+            cache: false,
+            data : data,
+            success : function(result) {
+              var res = JSON.parse(result);
+              $(".register_result").text(res.msg);
+              console.log("SUCCESS : ", result);
+              $("#register").prop("disabled", false);
+            },
+            error: function(e) {
+              $(".register_result").text(e.responseText);
+              console.log("ERROR : ", e);
+              $("#register").prop("disabled", false);
+            }
+          });
+        }
+      } else {
+        alert("All fields have to filled");
+      }
+    });
+
+  })
+</script>

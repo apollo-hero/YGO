@@ -1,0 +1,156 @@
+<div class="filter-side themes filter-section">
+    <div class="scrollbar">
+        <h4 class="text-center mt-4 mb-3">Filter</h4>
+        <div class="border-bottom mb-3"></div>
+
+        <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="in-stock">
+            <label class="custom-control-label ml-3" for="in-stock">In Stock</label>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Sort By</h5>
+        <div class="custom-control custom-radio custom-control-inline mb-2 ml-3">
+            <input type="radio" id="relevance" name="sort-by" class="custom-control-input">
+            <label class="custom-control-label" for="relevance">Relevance</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline mb-2 ml-3">
+            <input type="radio" id="alpha-asc" name="sort-by" class="custom-control-input" checked="checked">
+            <label class="custom-control-label" for="alpha-asc">Alphabetically: A-Z</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline mb-2 ml-3">
+            <input type="radio" id="alpha-desc" name="sort-by" class="custom-control-input">
+            <label class="custom-control-label" for="alpha-desc">Alphabetically: Z-A</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline mb-2 ml-3">
+            <input type="radio" id="high-low" name="sort-by" class="custom-control-input">
+            <label class="custom-control-label" for="high-low">Price: High to Low</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline mb-2 ml-3">
+            <input type="radio" id="low-high" name="sort-by" class="custom-control-input">
+            <label class="custom-control-label" for="low-high">Low to High</label>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Price Range</h5>
+        <div class="row ml-2 mr-2">
+            <div class="col-md-12">
+                <div id="input-slider-range"></div>
+
+                <div class="row form-row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="input-slider-range-value-1" />
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="input-slider-range-value-2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Set Name</h5>
+        <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="set-dude">
+            <label class="custom-control-label ml-3" for="set-dude">DUDE</label>
+        </div>
+        <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="set-icas">
+            <label class="custom-control-label ml-3" for="set-icas">ICAS</label>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Card Type</h5>
+        <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="card-type-em">
+            <label class="custom-control-label ml-3" for="card-type-em">Effect Monster</label>
+        </div>
+        <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="card-type-lem">
+            <label class="custom-control-label ml-3" for="card-type-lem">Link Effect Monster</label>
+        </div>
+        <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="card-type-sc">
+            <label class="custom-control-label ml-3" for="card-type-sc">Spell Card</label>
+        </div>
+        <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="card-type-tc">
+            <label class="custom-control-label ml-3" for="card-type-tc">Trap Card</label>
+        </div>
+        <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="card-type-nm">
+            <label class="custom-control-label ml-3" for="card-type-nm">Normal Monster</label>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Attribute</h5>
+        <div class="btn-group btn-group-toggle ml-3 mr-2 flex-wrap" data-toggle="buttons">
+            <label class="btn btn-theme active"><input type="checkbox" checked autocomplete="off"> DARK </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> LIGHT </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> WIND </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> FIRE </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> WATER </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> EARTH </label>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Type</h5>
+        <div class="btn-group btn-group-toggle ml-3 mr-2 flex-wrap" data-toggle="buttons">
+            <label class="btn btn-theme active"><input type="checkbox" checked autocomplete="off"> Friend </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Cyberse </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Fairy </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Zombie </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Dragon </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Equip </label>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Level</h5>
+        <div class="btn-group btn-group-toggle ml-3" data-toggle="buttons">
+            <label class="btn btn-sm btn-theme active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
+            </label>
+            <label class="btn btn-sm btn-theme"><input type="radio" name="options" id="option2" autocomplete="off"> 2 </label>
+            <label class="btn btn-sm btn-theme"><input type="radio" name="options" id="option3" autocomplete="off"> 3 </label>
+            <label class="btn btn-sm btn-theme"><input type="radio" name="options" id="option4" autocomplete="off"> 4 </label>
+            <label class="btn btn-sm btn-theme"><input type="radio" name="options" id="option5" autocomplete="off"> 5 </label>
+            <label class="btn btn-sm btn-theme"><input type="radio" name="options" id="option6" autocomplete="off"> 6 </label>
+            <label class="btn btn-sm btn-theme"><input type="radio" name="options" id="option7" autocomplete="off"> 7 </label>
+            <label class="btn btn-sm btn-theme"><input type="radio" name="options" id="option8" autocomplete="off"> 8 </label>
+            <label class="btn btn-sm btn-theme"><input type="radio" name="options" id="option9" autocomplete="off"> 9 </label>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Rarity</h5>
+        <div class="btn-group btn-group-toggle ml-3 mr-2 flex-wrap" data-toggle="buttons">
+            <label class="btn btn-theme active"><input type="checkbox" checked autocomplete="off"> Rare </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Secret Rare </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Ultra Rare </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Common </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Super Rare </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Prismatic Secret Rare </label>
+        </div>
+
+        <div class="clearfix mb-3"></div>
+
+        <h5 class="card-body__title ml-2">Condition</h5>
+        <div class="btn-group btn-group-toggle ml-3 mr-2 flex-wrap" data-toggle="buttons">
+            <label class="btn btn-theme active"><input type="checkbox" checked autocomplete="off"> Near Mint </label>
+            <label class="btn btn-theme"><input type="checkbox" autocomplete="off"> Heavily Played </label>
+        </div>
+        <div class="clearfix mb-5"></div>
+    </div>
+</div>

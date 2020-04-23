@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>YGO TRADER</title>
+  <link rel="icon" href="../../favicon.png">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <!-- Vendor styles -->
+  <link rel="stylesheet" href="../../resources/vendors/zwicon/zwicon.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/overlay-scrollbars/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/dropzone/dropzone.css">
+  <link rel="stylesheet" href="../../resources/vendors/flatpickr/flatpickr.min.css" />
+  <link rel="stylesheet" href="../../resources/vendors/nouislider/nouislider.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+  <link rel="stylesheet" href="../../resources/vendors/trumbowyg/ui/trumbowyg.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/rateyo/jquery.rateyo.min.css">
+  <link rel="stylesheet" href="../../resources/vendors/lightgallery/css/lightgallery.min.css">
+
+  <link rel="stylesheet" href="../../resources/vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- App styles -->
+  <link rel="stylesheet" href="../../resources/css/app.min.css">
+  <!-- YGO Trader self styles -->
+  <link rel="stylesheet" href="../../ygoself/css/ygo.app.css">
+  <link rel="stylesheet" href="../../ygoself/css/ygo.auth.css">
+</head>
+
+<body data-sa-theme="4">
+<main class="main">
+  <div w3-include-html="../common/loader.html"></div>
+
+  <section class="content content--full" style="padding-top: 0;">
+    <div class="content__inner">
+      <header class="header-section visible-desktop">
+        <div w3-include-html="../common/main_header_desktop.html"></div>
+        <div w3-include-html="../common/tool_header.html"></div>
+        <div w3-include-html="../common/subtool_header_tradecenter.html"></div>
+      </header>
+
+      <header class="header-section header-top visible-mobile">
+        <div w3-include-html="../common/main_header_mobile.html"></div>
+        <div w3-include-html="../common/subtool_header_search.html"></div>
+      </header>
+
+      <div class="content__inner inner-section">
+        <div class="row d-flex justify-content-center">
+          <div class="messages message-display1 col-11 col-sm-10 col-md-11 col-lg-11 col-xl-10  d-flex justify-content-center pb-4" style="background-color: #282828; border-color: #282828; box-shadow: none;">
+            <div class="messages__sidebar col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" style="background-color: #343434;">
+              <div class="messages__search" style ="border-bottom: 1px solid #fffff530;">
+                <img class="ml-n3" src="../../ygoself/img/message_browse.png" />
+                <div class="form-group mb-0">
+                  <input type="text" class="form-control" style="background-color: #363350;" placeholder="Search...">
+                </div>
+              </div>
+
+              <div class="listview listview--hover">
+                <div class="scrollbar">
+                  <a class="listview__item chat_user" value="0">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/4.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon0" style="display:none;">
+                        <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading" value="1">Davil Parnell</div>
+                      <p>Fierent fastidii recteque ad pro</p>
+                    </div>
+                  </a>
+
+                  <a class="listview__item listview__item--active chat_user" value="1">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/8.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon1">
+                      <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading">Ann Watkinson</div>
+                      <p>Cum sociis natoque penatibus </p>
+                    </div>
+                  </a>
+
+                  <a class="listview__item chat_user" value="2">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/3.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon2" style="display:none;">
+                      <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading">Marse Walter</div>
+                      <p>Suspendisse sapien ligula</p>
+                    </div>
+                  </a>
+
+                  <a class="listview__item chat_user" value="3">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/2.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon3" style="display:none;">
+                      <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading">Jeremy Robbins</div>
+                      <p>Phasellus porttitor tellus nec</p>
+                    </div>
+                  </a>
+
+                  <a class="listview__item chat_user" value="4">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/4.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon4" style="display:none;">
+                      <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading">Reginald Horace</div>
+                      <p>Quisque consequat arcu eget</p>
+                    </div>
+                  </a>
+
+                  <a class="listview__item chat_user" value="5">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/5.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon5" style="display:none;">
+                      <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading">Shark Henry</div>
+                      <p>Nam lobortis odio et leo maximu</p>
+                    </div>
+                  </a>
+
+                  <a class="listview__item chat_user" value="6">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/2.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon6" style="display:none;">
+                      <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading">Paul Van Dack</div>
+                      <p>Nam posuere purus sed velit auctor sodales</p>
+                    </div>
+                  </a>
+
+                  <a class="listview__item chat_user" value="7">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/1.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon7" style="display:none;">
+                      <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading">James Anderson</div>
+                      <p>Vivamus imperdiet sagittis quam</p>
+                    </div>
+                  </a>
+
+                  <a class="listview__item chat_user" value="8">
+                    <div class="pull-left">
+                      <img src="../../ygoself/demo/img/profile-pics/3.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div id="chk_icon8" style="display:none;">
+                      <div style="background-image:url(../../ygoself/img/check_icon.png);width: 20px; height: 20px;margin-top: 25px;margin-left: -28px;"></div>
+                    </div>
+                    <div class="listview__content">
+                      <div class="listview__heading">Kane Williams</div>
+                      <p>Suspendisse justo nulla luctus nec</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="messages__body chat_review2 col-12 col-sm-10 col-md-8 col-lg-8 col-xl-8 border-left" style="background-color: #343434;">
+              <div class="messages__header row" style ="border-bottom: 1px solid #fffff530; margin-left: 0.5rem; margin-right: 0.5rem;">
+                <div class="col-12 pt-4 pb-3" style="background-color: #343434;">
+                  <div class="row d-flex flex-column">
+                    <div class="toolbar__label__review1  d-flex justify-content-center">
+                      <img src="../../ygoself/demo/img/profile-pics/8.jpg" alt="">
+                    </div>
+
+                    <div class="d-flex justify-content-center message-card-info-review1">
+                      <div>
+                        <span class="message-card-set-code">(176,90)</span>
+                        <span class="message-card-name">Ann Watkinson</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start pl-4" style="text-align: center;">
+                      <span class="message-card-name" style="margin-top: -110px; font-style: italic;">Give<br>Reviews</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="messages__content py-2">
+                <div class="scrollbar">
+                  <div class="row pl-4 d-flex flex-column">
+                    <div class="d-flex justify-content-center pb-2">
+                      <span style="font-size: 20px; font-weight: bolder; text-decoration: underline solid;">Reviews</span>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span style="font-size: 20px;">masterofp(134.3)</span>
+                      <span class="pl-4" style="font-size: 15px;">Lorem ipsum dolor sit amet,consectetue adipiscing edit. In elementum uma id porttior pretium. Nullam a eleifend dolor, 
+                        vel ullamcorper elat. Integer nibh dui, llosuerer quis luctus pulvina, dignissmenu elit.</span>
+                      <div class="container">
+                        <div class="row  d-flex justify-content-center">
+                          <button id="star_btn" class="col-md-2 col-lg-2 px-5 btn w3-circle"><i id="fas-star" class='fas fa-check-circle' style='font-size:40px ; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-check-circle' style='font-size:40px ;display: none; '></i></button>
+                          <button id="star_btn" class="col-md-2 col-lg-2 pl-5 btn w3-circle"><i id="fas-star" class='fas fa-times-circle' style='font-size:40px ; display: none; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-times-circle' style='font-size:40px '></i></button>
+                          <div class="col-md-12 col-lg-8">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Card(s) as dicribed</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Fast Shipping</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Fast Payment</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span style="font-size: 20px;">masterofp(134.3)</span>
+                      <span class="pl-4" style="font-size: 15px;">Lorem ipsum dolor sit amet,consectetue adipiscing edit. In elementum uma id porttior pretium. Nullam a eleifend dolor, 
+                        vel ullamcorper elat. Integer nibh dui, llosuerer quis luctus pulvina, dignissmenu elit.</span>
+                      <div class="container">
+                        <div class="row  d-flex justify-content-center">
+                          <button id="star_btn" class="col-md-2 col-lg-2 px-5 btn w3-circle"><i id="fas-star" class='fas fa-check-circle' style='font-size:40px ; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-check-circle' style='font-size:40px ;display: none; '></i></button>
+                          <button id="star_btn" class="col-md-2 col-lg-2 pl-5 btn w3-circle"><i id="fas-star" class='fas fa-times-circle' style='font-size:40px ; display: none; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-times-circle' style='font-size:40px '></i></button>
+                          <div class="col-md-12 col-lg-8">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Card(s) as dicribed</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Fast Shipping</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Fast Payment</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span style="font-size: 20px;">masterofp(134.3)</span>
+                      <span class="pl-4" style="font-size: 15px;">Lorem ipsum dolor sit amet,consectetue adipiscing edit. In elementum uma id porttior pretium. Nullam a eleifend dolor, 
+                        vel ullamcorper elat. Integer nibh dui, llosuerer quis luctus pulvina, dignissmenu elit.</span>
+                      <div class="container">
+                        <div class="row  d-flex justify-content-center">
+                          <button id="star_btn" class="col-md-2 col-lg-2 px-5 btn w3-circle"><i id="fas-star" class='fas fa-check-circle' style='font-size:40px ; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-check-circle' style='font-size:40px ;display: none; '></i></button>
+                          <button id="star_btn" class="col-md-2 col-lg-2 pl-5 btn w3-circle"><i id="fas-star" class='fas fa-times-circle' style='font-size:40px ; display: none; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-times-circle' style='font-size:40px '></i></button>
+                          <div class="col-md-12 col-lg-8">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Card(s) as dicribed</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Fast Shipping</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-sm-5" style="font-size: 16px;">Fast Payment</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="messages__reply row">
+                <div class="text">
+                  <textarea class="messages__reply__text" disabled></textarea>
+                </div>
+              </div>
+            </div>
+          </div>  
+          
+          
+          <!-- ************ -->
+          <div class="messages message-display2 col-11 col-sm-10 col-md-11 col-lg-11 col-xl-11 d-flex justify-content-center" style="background-color: #282828; border-color: #282828; box-shadow: none; display:none;">
+            <div class="messages__body chat_review2 col-12 col-sm-12 border-left" style="background-color: #343434;">
+              <div class="messages__header row" style ="border-bottom: 1px solid #fffff530; margin-left: 0.5rem; margin-right: 0.5rem;">
+                <div class="col-12 pt-4 pb-3" style="background-color: #343434;">
+                  <div class="row d-flex flex-column">
+                    <div class="toolbar__label__review1  d-flex justify-content-center">
+                      <img src="../../ygoself/demo/img/profile-pics/8.jpg" alt="">
+                    </div>
+
+                    <div class="d-flex justify-content-center message-card-info-review1">
+                      <div>
+                        <span class="message-card-set-code">(176,90)</span>
+                        <span class="message-card-name">Ann Watkinson</span>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start pl-4" style="text-align: center;">
+                      <span class="message-card-name" style="margin-top: -110px; font-style: italic;">Give<br>Reviews</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="messages__content py-2">
+                <div class="scrollbar">
+                  <div class="row pl-4 d-flex flex-column">
+                    <div class="d-flex justify-content-center pb-2">
+                      <span style="font-size: 20px; font-weight: bolder; text-decoration: underline solid;">Reviews</span>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span style="font-size: 20px;">masterofp(134.3)</span>
+                      <span class="pl-4" style="font-size: 15px;">Lorem ipsum dolor sit amet,consectetue adipiscing edit. In elementum uma id porttior pretium. Nullam a eleifend dolor, 
+                        vel ullamcorper elat. Integer nibh dui, llosuerer quis luctus pulvina, dignissmenu elit.</span>
+                      <div class="container">
+                        <div class="row d-flex justify-content-center">
+                          <button id="star_btn" class="col-2 col-sm-2 px-5 btn w3-circle"><i id="fas-star" class='fas fa-check-circle' style='font-size:40px ; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-check-circle' style='font-size:40px ;display: none; '></i></button>
+                          <button id="star_btn" class="col-2 col-sm-2 pl-5 btn w3-circle"><i id="fas-star" class='fas fa-times-circle' style='font-size:40px ; display: none; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-times-circle' style='font-size:40px '></i></button>
+                          <div class="col-12 col-sm-12">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Card(s) as dicribed</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Fast Shipping</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Fast Payment</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span style="font-size: 20px;">masterofp(134.3)</span>
+                      <span class="pl-4" style="font-size: 15px;">Lorem ipsum dolor sit amet,consectetue adipiscing edit. In elementum uma id porttior pretium. Nullam a eleifend dolor, 
+                        vel ullamcorper elat. Integer nibh dui, llosuerer quis luctus pulvina, dignissmenu elit.</span>
+                      <div class="container">
+                        <div class="row d-flex justify-content-center">
+                          <button id="star_btn" class="col-2 col-sm-2 px-5 btn w3-circle"><i id="fas-star" class='fas fa-check-circle' style='font-size:40px ; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-check-circle' style='font-size:40px ;display: none; '></i></button>
+                          <button id="star_btn" class="col-2 col-sm-2 pl-5 btn w3-circle"><i id="fas-star" class='fas fa-times-circle' style='font-size:40px ; display: none; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-times-circle' style='font-size:40px '></i></button>
+                          <div class="col-12 col-sm-12">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Card(s) as dicribed</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Fast Shipping</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Fast Payment</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span style="font-size: 20px;">masterofp(134.3)</span>
+                      <span class="pl-4" style="font-size: 15px;">Lorem ipsum dolor sit amet,consectetue adipiscing edit. In elementum uma id porttior pretium. Nullam a eleifend dolor, 
+                        vel ullamcorper elat. Integer nibh dui, llosuerer quis luctus pulvina, dignissmenu elit.</span>
+                      <div class="container">
+                        <div class="row d-flex justify-content-center">
+                          <button id="star_btn" class="col-2 col-sm-2 px-5 btn w3-circle"><i id="fas-star" class='fas fa-check-circle' style='font-size:40px ; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-check-circle' style='font-size:40px ;display: none; '></i></button>
+                          <button id="star_btn" class="col-2 col-sm-2 pl-5 btn w3-circle"><i id="fas-star" class='fas fa-times-circle' style='font-size:40px ; display: none; background-color: black; border-radius: 20px; color: green;'></i><i id="far-star" class='far fa-times-circle' style='font-size:40px '></i></button>
+                          <div class="col-12 col-sm-12">
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Card(s) as dicribed</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Fast Shipping</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                              <div class="col-12 col-sm-4" style="font-size: 16px;">Fast Payment</div>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                              <button id="star_btn" class="star_btn"><i id="fas-star" class='fas fa-star' style='font-size:20px ; display: none;'></i><i id="far-star" class='far fa-star' style='font-size:20px'></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="messages__reply row">
+                <div class="text">
+                  <textarea class="messages__reply__text" disabled></textarea>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+
+      <header class="header-section header-bottom visible-mobile" style="bottom: 0;">
+        <div w3-include-html="../common/tool_header.html"></div>
+      </header>
+    </div>
+  </section>
+</main>
+
+
+<script src="../../resources/vendors/jquery/jquery.min.js"></script>
+<script src="../../resources/vendors/popper.js/popper.min.js"></script>
+<script src="../../resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../resources/vendors/overlay-scrollbars/jquery.overlayScrollbars.min.js"></script>
+
+<script src="../../resources/vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+<script src="../../resources/vendors/select2/js/select2.full.min.js"></script>
+<script src="../../resources/vendors/dropzone/dropzone.min.js"></script>
+<script src="../../resources/vendors/flatpickr/flatpickr.min.js"></script>
+<script src="../../resources/vendors/nouislider/nouislider.min.js"></script>
+<script src="../../resources/vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="../../resources/vendors/trumbowyg/trumbowyg.min.js"></script>
+<script src="../../resources/vendors/rateyo/jquery.rateyo.min.js"></script>
+<script src="../../resources/vendors/jquery-text-counter/textcounter.min.js"></script>
+<script src="../../resources/vendors/autosize/autosize.min.js"></script>
+<script src="../../resources/vendors/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script src="../../resources/js/app.min.js"></script>
+<script src="../../ygoself/js/html-include.js"></script>
+<script src="../../ygoself/js/common-util.js"></script>
+
+</body>
+
+<script>
+  includeHTML();
+  
+  $(document).on ("click", "#face-select", function (event) {
+    var url_img;
+    url_img = $(this).attr('src');
+    $("#img-display").attr('src',url_img);
+  });
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+<div class="modal-content">
+  <form id="formdata_forgot" enctype="multipart/form-data">
+    <div class="modal-header" style="text-align: center;">
+        <div style="font-size: 1.5rem; font-weight: bold;">Forgot Password?</div>
+        <span class="forgot_result" style="color: #ff0000; font-size: 16px; text-align: center;"></span>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <i class="fa fa-user" style="color: #323232; position: absolute; font-size: 1.5rem; bottom: .9rem;"></i>
+            <input type="email" id="email_forgot" name="email" class="form-control" placeholder="Email" required>
+            <span style="position: absolute; right: 0; bottom: .9rem; color: #E2CBB2; font-style: italic;">(required)</span>
+        </div>
+
+        <div class="d-flex" style="justify-content: space-between">
+            <span class="auth-param to-login" style="color: #827b7b; cursor: pointer;">Already have an account?</span>
+            <span class="auth-param to-register" style="color: #827b7b; cursor: pointer;">Create Account</span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-link forgot" id="forgot"
+                style="flex: 1; border-radius: 20px; background-color: #91B84A; font-size: 1.1rem; font-weight: bold;">Submit</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(".forgot").click(function() {
+      var email = $("#email_forgot").val();
+      if(email != "") {
+        event.preventDefault();
+        var form = $('#formdata_forgot')[0];
+        var data = new FormData(form);
+        var apikey = localStorage.getItem('key');
+        $("#forgot").prop("disabled", true);
+        $.ajax({
+          url: "http://api.ygotrader.com/api/seller/recover",
+          type : "POST",
+          enctype: 'multipart/form-data',
+          processData: false,
+          contentType: false,
+          cache: false,
+          data : data,
+          headers: { "Authorization": apikey },
+          success : function(result) {
+            $(".forgot_result").text(result.msg);
+            console.log("SUCCESS : ", result);
+            $("#forgot").prop("disabled", false);
+          },
+          error: function(e) {
+            $(".forgot_result").text(e.responseText);
+            console.log("ERROR : ", e);
+            $("#forgot").prop("disabled", false);
+          }
+        });
+      } else {
+        alert("Email field is required!")
+      }
+    });
+
+  })
+</script>

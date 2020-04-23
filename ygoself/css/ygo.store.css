@@ -1,0 +1,171 @@
+.store-card-group .store-card,
+.ebay-range-group .store-card {
+    width: 80%;
+    margin: auto;
+    padding: 20px 5px;
+    background-color: #211F1F;
+    color: #8F928A;
+    border-bottom: 3px solid #82671F;
+    font-size: 1.1rem;
+    display: flex;
+}
+
+.store-card-group .store-card .logo-section {
+    flex: 2;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.ebay-range-group .store-card .logo-section {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.store-card-group .store-card .logo-section > img,
+.ebay-range-group .store-card .logo-section > img {
+    width: 150px;
+}
+
+.store-card-group .store-card .desc-section,
+.ebay-range-group .store-card .desc-section {
+    flex: 3;
+}
+
+.ebay-range-group .store-card .desc-section {
+    padding-left: 2rem;
+}
+
+.store-card-group .store-card .t-bg-ex,
+.ebay-range-group .store-card .t-bg-ex {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.store-card-group .store-card .t-bg,
+.ebay-range-group .store-card .t-bg {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.store-card-group .store-card .t-bg-sub,
+.ebay-range-group .store-card .t-bg-sub {
+    font-size: 1.4rem;
+}
+
+.store-card-group .store-card .t-md,
+.ebay-range-group .store-card .t-md {
+    font-size: .9rem;
+}
+
+.store-card-group .store-card .t-sm,
+.ebay-range-group .store-card .t-sm {
+    font-size: .7rem;
+}
+
+.store-card-group .store-card .t-thin,
+.ebay-range-group .store-card .t-thin {
+    letter-spacing: -1px;
+}
+
+.store-card-group .store-card .desc-section .market,
+.ebay-range-group .store-card .desc-section .market {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ebay-range-group .btn-act {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.store-card-group .store-card .desc-section select {
+    display: block;
+    width: 100%;
+}
+
+.store-card-group .store-card .cnt-section {
+    flex: 1;
+    text-align: center;
+}
+
+.store-card-group .store-card .cnt-section .control {
+    font-size: 2.3rem;
+    color: #D1AA42;
+    cursor: pointer;
+}
+
+.jumbotron-tradecenter-main {
+    padding: 0.5rem 0rem;
+    margin-bottom: 20%;
+    background-color: #424242;
+    border-radius: .3rem;
+}
+.card-radius {
+  border-radius: 15px!important;
+}
+
+#message-tradecenter-main {
+  display: none;
+}
+.messages-self {
+  height: 70%;
+}
+
+.store-card-cus {
+  background-color: #211F1F;
+  border-bottom: 3px solid #82671F;
+}
+.store-card-fontcolor {
+  color: #8F928A;
+}
+.cus-h4 {
+  font-size: 1.35rem;
+}
+.cus-h5 {
+  font-size: 1.15rem;
+}
+.store-card-cus .store-card-cus-select select {
+  /* display: block; */
+  width: 100%;
+}
+.store-card-cus .store-card-cus-cnt .control {
+  font-size: 2.3rem;
+  color: #D1AA42;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+  .game-card-group-cus {
+    margin-top: 100px;
+  }
+  .store-card-cus {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .store-card-cus .store-card-cus-logo, .store-card-cus-select {
+    justify-content: center !important;
+  }
+  .store-card-cus .ebay-range-image .cus-pl {
+    padding-left: 5px !important; 
+    text-align: start;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .store-card-cus .ebay-range-image .cus-pl {
+    padding-left: 0 !important;
+    text-align: center;
+    justify-content: center ;
+  }
+}
+
+@media (max-width: 998px) {
+  .messages-self {
+    height: 120%;
+  }
+}
+
