@@ -15,21 +15,7 @@ const GET = (suburl, formData, onSuccess, onFailed) => {
 		.then(response => response.text())
 		.then(result => console.log(result))
 		.catch(error => console.log('error', error));
-	//
-	// if (response) {
-	// 	const jsonObj = await response.json();
-	// 	if (jsonObj.status === 'ok') {
-	// 		if (onSuccess) {
-	// 			onSuccess(jsonObj.data);
-	// 		}
-	// 	} else {
-	// 		if (onFailed) {
-	// 			onFailed(jsonObj.data);
-	// 		}
-	// 	}
-	// } else {
-	// 	console.log(`response is null ${suburl} ${JSON.stringify(body)}`);
-	// }
+	
 };
 
 const POST = async(suburl, body, onSuccess, onFailed) => {
